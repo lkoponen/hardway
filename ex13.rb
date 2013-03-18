@@ -15,13 +15,13 @@
 #color, item = ARGV
 #puts "I love your #{color} #{item}!"
 
-#name, age, city = ARGV
+name, age, city = ARGV
 
 puts "Hello, what is your name?"
-name = gets.chomp()
+name2 = STDIN.gets.chomp()
 puts "How old are you?"
-age = gets.chomp()
+age2 = STDIN.gets.chomp()
 puts "Where are you from?"
-city = gets.chomp()
+city2 = STDIN.gets.chomp()
 
-puts "Oh, I see. Your name is #{name}, you are #{age} years old and you are from #{city}. Pleasure to meet you!"
+puts "Oh, I see. Your name is #{name} #{name2}, you are #{age} #{age2} years old and you are from #{city} #{city2}. Pleasure to meet you!"
