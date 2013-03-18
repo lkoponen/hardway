@@ -1,6 +1,5 @@
 class Hero
 #Welcome to the Ladies in Tech Hero Test
-#Explain purpose of test
 
 #set variables: Ada Lovelace, Anita Borg, Angela Byron, Grace Hopper, Mary Lou Jepsen, Radia Perlman, Janie Tsao
 	def initialize(start)
@@ -33,7 +32,17 @@ class Hero
 			next_room = room.call()
 		end
 	end
-
+#Explain purpose of test
+	def welcome()
+		puts "Welcome to the \"Who is your Women in Tech Hero?\" test!"
+		puts "Please hit any key to continue."
+		
+		prompt()
+		
+		@continue = gets.chomp
+		
+		return :likes
+	end
 #Question 1
 	def likes()
 		puts "Which of the following would you most like to study? Enter the number below."
@@ -145,7 +154,8 @@ class Hero
 			return :goals
 		end
 	end
-	
+
+#Add scores to appropriate women	
 	def sort_scores()
 		scores = {
 			:anita_borg => { :name => "Anita Borg", :score => @anita_borg.length },
@@ -160,7 +170,8 @@ class Hero
 		
 		return :results
 	end
-	
+
+#at end, present bio of the woman you selected	
 	def results()
 		
 		ordered_scores = []
@@ -192,9 +203,8 @@ class Hero
 	end
 end
 
-#Add scores to appropriate women
+#Initialize new game
+game = Hero.new(:welcome)
 
-#at end, present bio of the woman you selected
-
-game = Hero.new(:likes)
+#Play game
 game.play()
